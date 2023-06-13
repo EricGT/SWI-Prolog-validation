@@ -26,6 +26,8 @@ Open command prompt
 Change to directory containing `main.py`  
 `> python main.py`
 
+Example of HTTP server starting.
+
 C:\Users\Groot\SWI-Prolog REPL>python main.py
  * Serving Flask app 'main'
  * Debug mode: off
