@@ -12,18 +12,19 @@ This ChatGPT plugin requires
    * flask-cors
    * swiplserver
 
-Python can be installed from https://www.python.org/downloads/
-Once Python is installed
-> pip install flask-cors
-> pip install swiplserver
+Python can be installed from https://www.python.org/downloads/  
+
+Once Python is installed  
+> pip install flask-cors  
+> pip install swiplserver  
 
 ---
 
 To start HTTP server:
 
 Open command prompt
-Change to directory containing `main.py`
-> python main.py
+Change to directory containing `main.py`  
+`> python main.py`
 
 C:\Users\Groot\SWI-Prolog REPL>python main.py
  * Serving Flask app 'main'
