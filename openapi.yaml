@@ -1,0 +1,43 @@
+openapi: 3.1.0
+info:
+  title: SWI-Prolog Compiler API
+  description: A plugin to compile SWI-Prolog and return success or errors.
+  version: 0.0.0.1
+servers:
+  - url: http://localhost:5003
+paths:
+  /compile:
+    post:
+      operationId: compileCode
+      summary: compile
+      requestBody:
+        description: Compile SWI-Prolog code
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                code:
+                  type: string
+                  description: SWI-Prolog code to compile
+      responses:
+        '200':
+          description: Compilation result
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                    description: Indicates whether the compilation was successful
+                  errors:
+                    type: array
+                    items:
+                      type: string
+                    description: Compilation errors (if any)
+        '400':
+          description: Invalid request
+        '500':
+          description: Internal server error
