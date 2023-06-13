@@ -11,12 +11,16 @@ This ChatGPT plugin requires
 * Python 3.x
    * flask-cors
    * swiplserver
+ * SWI-Prolog 9.x
 
 Python can be installed from https://www.python.org/downloads/  
 
 Once Python is installed  
 > pip install flask-cors  
 > pip install swiplserver  
+
+SWI-Prolog downloads can be found at https://www.swi-prolog.org/Download.html
+The installation instructions vary upon type of download and are noted as you follow the links for a specific download.
 
 ---
 
