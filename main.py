@@ -61,51 +61,5 @@ def compile_code():
     except Exception as e:
         return jsonify({'error': str(e)}), 500
 
-# @app.route('/compile', methods=['POST'])
-# def compile_code():
-#     try:
-#         code = request.data.decode('utf-8')  # Read the request data as UTF-8 string
-        
-#         # Print HTTP headers
-#         headers = request.headers
-#         print("HTTP Headers:", headers)
-        
-#         # Print HTTP request
-#         http_method = request.method
-#         http_path = request.path
-#         print("HTTP Request:", http_method, http_path, code)
-        
-#         print("Code:", code)
-#         print("Code Type:", type(code))
-
-#         # Save code to file so it can be compiled.
-#         with open("code.pl", "w") as file:
-#             file.write(code)
-        
-#         with PrologMQI() as mqi:
-#             with mqi.create_thread() as prolog_thread:  
-#                 result = prolog_thread.query('[compile]')        
-#                 print(result)        
-#                 errors = prolog_thread.query('compile:compile(Errors)')             
-#                 print(errors)
-#                 error_message = []
-#                 try:
-#                     error_message = errors[0]['Errors'][0]['args'][1]
-#                 except (IndexError, KeyError):
-#                     pass
-   
-#         response = {
-#             'success': True,
-#             'Errors': error_message
-#         }
-        
-#         return jsonify(response), 200
-    
-#     except BadRequest:
-#         return jsonify({'error': 'Invalid request'}), 400
-    
-#     except Exception as e:
-#         return jsonify({'error': str(e)}), 500
-
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5003)
